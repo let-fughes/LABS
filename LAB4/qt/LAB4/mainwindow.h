@@ -18,7 +18,9 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_radioButton_clicked();
+
+    void on_radioButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;

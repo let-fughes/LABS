@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Система управления данными районов города</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="inputGroup">
+      <property name="title">
+       <string>Ввод данных</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="dataTypeLabel">
+         <property name="text">
+          <string>Тип данных:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="dataTypeComboBox"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="valueLabel">
+         <property name="text">
+          <string>Значение:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="valueLineEdit"/>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="addValueButton">
+           <property name="text">
+            <string>Добавить значение</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="removeLastButton">
+           <property name="text">
+            <string>Удалить последнее</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="clearButton">
+           <property name="text">
+            <string>Очистить все</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="dataGroup">
+      <property name="title">
+       <string>Введенные данные</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QTextEdit" name="valuesTextEdit">
+         <property name="maximumHeight">
+          <number>150</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="processGroup">
+      <property name="title">
+       <string>Обработка данных</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPushButton" name="processButton">
+         <property name="text">
+          <string>Обработать данные</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #27ae60; font-size: 14px; padding: 10px;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="resultLabel">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight: bold; font-size: 16px; color: #2c3e50; background-color: #ecf0f1; padding: 15px; border-radius: 5px; border: 2px solid #bdc3c7;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="infoLabel">
+      <property name="text">
+       <string>Для выхода нажмите Esc</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #7f8c8d; font-style: italic; padding: 10px;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -10,20 +10,18 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
-    podrobnee.cpp
+    mainwindow.cpp
 
 HEADERS += \
-    mainwindow.h \
-    podrobnee.h
+    mainwindow.h
 
 FORMS += \
-    mainwindow.ui \
-    podrobnee.ui
+    mainwindow.ui
+
+RESOURCES += \
+    res.qrc
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-
-RESOURCES += resources.qrc

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Инвестиционный чат</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #2b2b2b;
+    color: #ffffff;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="text">
+       <string>Мәліміткізу</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 15px;
+    background-color: #3a3a3a;
+    border-bottom: 2px solid #4CAF50;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextBrowser" name="chatBrowser">
+      <property name="styleSheet">
+       <string notr="true">QTextBrowser {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+}
+
+QTextBrowser QScrollBar:vertical {
+    background-color: #2b2b2b;
+    width: 15px;
+    border-radius: 7px;
+}
+
+QTextBrowser QScrollBar::handle:vertical {
+    background-color: #4CAF50;
+    border-radius: 7px;
+    min-height: 20px;
+}
+
+QTextBrowser QScrollBar::handle:vertical:hover {
+    background-color: #45a049;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="inputWidget" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLineEdit" name="nameEdit">
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="placeholderText">
+          <string>Ваше имя</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #4CAF50;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="messageEdit">
+         <property name="placeholderText">
+          <string>Введите сообщение...</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #4CAF50;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="sendButton">
+         <property name="text">
+          <string>➤</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 50px;
+}
+
+QPushButton:hover {
+    background-color: #45a049;
+}
+
+QPushButton:pressed {
+    background-color: #3d8b40;
+}
+
+QPushButton:disabled {
+    background-color: #555555;
+    color: #888888;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="connectionWidget" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="serverAddressEdit">
+         <property name="placeholderText">
+          <string>Адрес сервера</string>
+         </property>
+         <property name="text">
+          <string>127.0.0.1</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="portEdit">
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="placeholderText">
+          <string>Порт</string>
+         </property>
+         <property name="text">
+          <string>2323</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="connectButton">
+         <property name="text">
+          <string>Подключиться</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 120px;
+}
+
+QPushButton:hover {
+    background-color: #1976D2;
+}
+
+QPushButton:pressed {
+    background-color: #0d47a1;
+}
+
+QPushButton:disabled {
+    background-color: #555555;
+    color: #888888;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

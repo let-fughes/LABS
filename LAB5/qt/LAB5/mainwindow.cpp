@@ -38,7 +38,7 @@ bool MainWindow::initDatabase()
 {
     // Создание соединения с базой данных SQLite
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("documents.db");  // Имя файла базы данных
+    db.setDatabaseName("documents.db");
 
     // Открытие базы данных
     if (!db.open()) {
